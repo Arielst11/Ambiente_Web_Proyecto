@@ -1,0 +1,52 @@
+body{
+    background-color: azure;
+}
+
+h1{
+    color: black;
+    font-size: 20px;    
+}
+
+.gridContainer-Nav{
+    background-color: darkcyan;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+    
+    align-items: center;
+    column-gap: 10px;
+}
+
+.nav-element-brand{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+.nav-element{
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.gridContainer-puntosEntrega{
+    column-gap: 10px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 230px 230px 230px 230px ;
+}
+
+.card{
+    background-color: white;
+    justify-content: center;
+    width: 230px;
+    border-radius: 1%;
+    border-style: solid;
+    border-color: darkslategray;
+}
+
+.card-title{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
