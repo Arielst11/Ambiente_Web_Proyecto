@@ -25,16 +25,20 @@ $generoValidado = validaDatos($genero);
 // mostrar confirmacion o resultado de datos antes de ingresar a base de datos
 
 if($nombreValidado == false || $correoValidado == false || $contra1Validado == false || $contra2Validado == false || $telefonoValidado == false || $direccionValidado == false || $generoValidado == false){
-    echo "<p>alguno de los elementos no fue completado </p>"; // cambiar por pagina basica 
+   // echo "<p>alguno de los elementos no fue completado </p>";  cambiar por pagina basica 
+    echo "<script>  alert('alguno de los elementos no fue completado') </script>";
 } elseif ($contra1 != $contra2){
-    echo "<p> las contraseñas son diferentes </p>"; // cambiar por pagina basica
+   // echo "<p> las contraseñas son diferentes </p>";  cambiar por pagina basica
+   echo "<script>  alert('las contraseñas son diferentes') </script>";
 }else {
     require_once "../Entities/Usuario.php";
 
     if(IngresarUsuario($nombre, $correo, $contra1, $telefono, $direccion, $genero )){
-        echo "<p> Usuario $nombre registrado correctamente. </p>"; // cambiar por pagina basica
+       //  echo "<p> Usuario $nombre registrado correctamente. </p>"; cambiar por pagina basica
+        echo "<script>  alert('Usuario $nombre registrado correctamente.') </script>";
     }else{
-        echo "<p> fallo al registrar el usuario $nombre </p>"; // cambiar por pagina basica
+      //  echo "<p> fallo al registrar el usuario $nombre </p>";  cambiar por pagina basica
+      echo "<script>  alert('fallo al registrar el usuario $nombre') </script>";
     }
 
 }
