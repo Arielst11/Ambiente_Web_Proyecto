@@ -19,3 +19,9 @@ descripcion varchar(300) not null,
 precio varchar(300) not null,
 imagen varchar(500) not null,
 primary key(id));
+
+
+insert into articulos ( nombre , descripcion ,  precio , imagen) values
+('Monitor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt', '₡15000' , 'https://www.intelec.co.cr/image/cache/catalog/catalogo/Monitores/5RD66AA-800x800w.jpg.webp' );
+insert into articulos ( nombre , descripcion ,  precio , imagen) values
+('Teclado', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt', '₡10000' , 'https://www.intelec.co.cr/image/cache/catalog/catalogo/Teclado/31300725101-800x800w.jpg.webp' );
