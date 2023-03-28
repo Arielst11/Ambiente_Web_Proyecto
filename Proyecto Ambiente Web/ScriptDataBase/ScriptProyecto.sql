@@ -10,3 +10,12 @@ telefono varchar(50) not null,
 direccion varchar(200) not null,
 genero varchar (10) not null,
 primary key(id));
+
+
+create table articulos(
+id int not null auto_increment,
+nombre varchar(25) not null,
+descripcion varchar(300) not null,
+precio varchar(300) not null,
+imagen varchar(500) not null,
+primary key(id));

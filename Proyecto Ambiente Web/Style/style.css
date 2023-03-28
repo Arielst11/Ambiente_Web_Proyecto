@@ -3,10 +3,13 @@ body{
 }
 
 h1{
+    text-align: center;
     color: black;
     font-size: 20px;    
 }
-
+/*
+Nav elements
+*/
 .gridContainer-Nav{
     background-color: darkcyan;
     display: grid;
@@ -29,6 +32,9 @@ h1{
     color: white;
 }
 
+/*
+puntos entrega elements
+*/
 .gridContainer-puntosEntrega{
     column-gap: 10px;
     justify-content: center;
@@ -49,4 +55,26 @@ h1{
     text-align: center;
     color: black;
     font-size: 20px;
+}
+
+/*
+Items elements
+*/
+
+.gridcontainer-Items {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 210px 210px 210px 210px ;
+    column-gap: 20px;
+
+}
+
+.card.cardItem{
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    border-radius: 1%;
+    border-style: solid;
+    border-color: darkslategray;
 }
