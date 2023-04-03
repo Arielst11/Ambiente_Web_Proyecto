@@ -10,6 +10,8 @@ $telefono = recogePost("Telefono-Usuario");
 $direccion = recogePost("Direccion-Usuario");
 $genero = recogePost("genero");
 
+// variable que indica la accion que se va a realizar.
+$accion = recogePost("Action-Usuario");
 // verifica que los datos no estan vacios, para no agregar strings vacios en la tabla de bases de datos.
 
 require_once "../Include/validadatos.php";
@@ -21,9 +23,13 @@ $contra2Validado = validaDatos($contra2);
 $telefonoValidado = validaDatos($telefono);
 $direccionValidado = validaDatos($direccion);
 $generoValidado = validaDatos($genero);
+$accionValidado = validaDatos($accion);
+
+
+// si la accion es Insert
+if($accionValidado == 'Insert'){
 
 // mostrar confirmacion o resultado de datos antes de ingresar a base de datos
-
 if($nombreValidado == false || $correoValidado == false || $contra1Validado == false || $contra2Validado == false || $telefonoValidado == false || $direccionValidado == false || $generoValidado == false){
    // echo "<p>alguno de los elementos no fue completado </p>";  cambiar por pagina basica 
     echo "<script>  alert('alguno de los elementos no fue completado') </script>";
@@ -42,3 +48,9 @@ if($nombreValidado == false || $correoValidado == false || $contra1Validado == f
     }
 
 }
+
+} else {
+  echo "<script>  alert('la accion no se pudo obtener') </script>";
+}
+
+

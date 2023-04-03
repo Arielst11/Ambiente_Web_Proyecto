@@ -45,6 +45,9 @@ include_once 'Include\navbar.html';
     <label class="form-check-label" for="Radio2">Mujer</label>
     <input type="radio" class="form-check-input" id="Radio2" name="genero" value="Mujer" >
   </div>
+  <div class="form-group">
+    <input type="hidden" id="action" name="Action-Usuario"  value= "Insert">
+  </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
