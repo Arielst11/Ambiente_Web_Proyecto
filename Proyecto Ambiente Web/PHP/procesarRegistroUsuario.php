@@ -33,18 +33,25 @@ if($accionValidado == 'Insert'){
 if($nombreValidado == false || $correoValidado == false || $contra1Validado == false || $contra2Validado == false || $telefonoValidado == false || $direccionValidado == false || $generoValidado == false){
    // echo "<p>alguno de los elementos no fue completado </p>";  cambiar por pagina basica 
     echo "<script>  alert('alguno de los elementos no fue completado') </script>";
+    echo "<script> window.location = '../Registrar.php' </script>";
+   
 } elseif ($contra1 != $contra2){
    // echo "<p> las contraseñas son diferentes </p>";  cambiar por pagina basica
    echo "<script>  alert('las contraseñas son diferentes') </script>";
+   echo "<script> window.location = '../Registrar.php' </script>";
 }else {
     require_once "../Entities/Usuario.php";
 
     if(IngresarUsuario($nombre, $correo, $contra1, $telefono, $direccion, $genero )){
        //  echo "<p> Usuario $nombre registrado correctamente. </p>"; cambiar por pagina basica
+        
         echo "<script>  alert('Usuario $nombre registrado correctamente.') </script>";
+        echo "<script> window.location = '../Registrar.php' </script>";
+        
     }else{
       //  echo "<p> fallo al registrar el usuario $nombre </p>";  cambiar por pagina basica
       echo "<script>  alert('fallo al registrar el usuario $nombre') </script>";
+      echo "<script> window.location = '../Registrar.php' </script>";
     }
 
 }
