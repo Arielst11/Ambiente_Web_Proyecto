@@ -1,8 +1,8 @@
 <?php
-require_once "DatabaseConexion\conexion.php";
+
 
 function muestraArticulos(){
-
+require_once "DatabaseConexion\conexion.php";
 $resultado;
 $conexion = Conecta();
 
@@ -19,13 +19,13 @@ return $resultado;
 // funciones de mario modificadas
 
 function IngresarArticulo($nombre, $descripcion, $precio, $imagen) {
-
+    require_once "../DatabaseConexion\conexion.php";
     $retorno = false;
     $conexion = Conecta();
 
     if (mysqli_set_charset($conexion, "utf8")) {
         $stmt = $conexion->prepare("Insert into articulos
-        (nombre, descipcion, precio, imagen)
+        (nombre, descripcion, precio, imagen)
         values(?,?,?,?)");
 
         $stmt->bind_param("ssss", $inombre, $idescripcion, $iprecio, $iimagen);
@@ -48,6 +48,7 @@ function IngresarArticulo($nombre, $descripcion, $precio, $imagen) {
 
 
 function ModificarArticulo($id, $nombre, $descripcion, $precio, $imagen) {
+    require_once "../DatabaseConexion\conexion.php";
     $retorno = false;
     $conexion = Conecta();
 
@@ -79,6 +80,7 @@ function ModificarArticulo($id, $nombre, $descripcion, $precio, $imagen) {
 }
 
 function EliminarArticulo($id) {
+    require_once "../DatabaseConexion\conexion.php";
     $retorno = false;
     $conexion = Conecta();
 

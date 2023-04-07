@@ -5,9 +5,9 @@ $id = recogePost("ID-Articulo");
 $nombre = recogePost("Nombre-Articulo");
 $descripcion = recogePost("Descripcion-Articulo");
 $precio = recogePost("Precio-Articulo");
-$imagen = recogePost("Imagen-Articulo");
+$imagen = recogePost("Imagen-Articulo"); 
 // variable que indica la accion que se va a realizar.
-$accion = recogePost("Accion-Articulo");
+$accion = recogePost("Action-Articulo");
 
 
 
@@ -23,32 +23,40 @@ $accionOK = validaDatos($accion);
 
 if($accion == "Insert"){
 
-if($nombreOk == false || $descripcionOk == false || $precioOk == false || $imagenOk == false) {
+if($nombreOk == false || $descripcionOk == false || $precioOk == false || $imagenOK == false) {
 
-    echo "<p> alguno de los elementos no fue completado </p>";
+    echo "<script>  alert('alguno de los elementos no fue completado') </script>";
+    echo "<script> window.location = '../InsertarArticulo.php' </script>";
 }else {
      require_once "../Entities/Articulo.php";
 
-     if (IngresarArticulo($nombre, $descipcion, $precio, $imagen)) {
-        echo "<p> Procuto $nombre fue registrado correctamente. </p>";
+     if (IngresarArticulo($nombre, $descripcion, $precio, $imagen)) {
+        echo "<script>  alert('el elemento $nombre fue ingresado correctamente') </script>";
+        echo "<script> window.location = '../InsertarArticulo.php' </script>";
 
      }else {
-        echo "<p> Fallo al registrar el producto $nombre </p>";
+        echo "<script>  alert('Fallo al registrar el producto $nombre') </script>";
+        echo "<script> window.location = '../InsertarArticulo.php' </script>";
      }
 }
 
 } elseif ($accion == "Update" ){
 
- if($idOK == false || $nombreOk == false || $descripcionOk == false || $precioOk == false || $imagenOk == false) {
+ if($idOK == false || $nombreOk == false || $descripcionOk == false || $precioOk == false || $imagenOK == false) {
 
-    echo "<p> alguno de los elementos no fue completado </p>";
+    echo "<script>  alert('alguno de los elementos no fue completado') </script>";
+    echo "<script> window.location = '../ModificarArticulo.php' </script>";
+
 } else {
     require_once "../Entities/Articulo.php";
 
     if (ModificarArticulo($id, $nombre, $descripcion, $precio, $imagen)) {
-        echo "<p> El producto $nombre ha sido modificado correctamente. </p>";
+        echo "<script>  alert('El producto $nombre ha sido modificado correctamente.') </script>";
+        echo "<script> window.location = '../ModificarArticulo.php' </script>";
+
     } else {
-        echo "<p> Error al modificar el producto $nombre. </p>";
+        echo "<script>  alert(' Error al modificar el producto $nombre. ') </script>";
+        echo "<script> window.location = '../ModificarArticulo.php' </script>";
     }
 }
 
@@ -56,14 +64,18 @@ if($nombreOk == false || $descripcionOk == false || $precioOk == false || $image
 
 if($idOK == false) {
 
-    echo "<p> alguno de los elementos no fue completado </p>";
+    echo "<script>  alert('alguno de los elementos no fue completado') </script>";
+    echo "<script> window.location = '../EliminarArticulo.php' </script>";
+
 } else {
     require_once "../Entities/Articulo.php";
 
     if (EliminarAriticulo($id)) {
-    echo "<p> El producto ha sido eliminado correctamente. </p>";
+    echo "<script>  alert('El producto ha sido eliminado correctamente.') </script>";
+    echo "<script> window.location = '../EliminarArticulo.php' </script>";
     } else {
-    echo "<p> Error al eliminar el producto. </p>";
+    echo "<script>  alert('Error al eliminar el producto.') </script>";
+    echo "<script> window.location = '../EliminarArticulo.php' </script>";
     }
 }
 

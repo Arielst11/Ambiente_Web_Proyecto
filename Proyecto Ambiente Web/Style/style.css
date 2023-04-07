@@ -13,10 +13,10 @@ Nav elements
 .gridContainer-Nav{
     background-color: darkcyan;
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
-    
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px;
     align-items: center;
     column-gap: 10px;
+    justify-content: center;
 }
 
 .nav-element-brand{
@@ -77,4 +77,24 @@ Items elements
     border-radius: 1%;
     border-style: solid;
     border-color: darkslategray;
+}
+
+
+/*
+sub menu articulos
+*/
+
+.gridcontainer-submenu-articulos{
+
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: center;
+    column-gap: 60px;
+
+}
+
+.submenu-articulo {
+text-align: center;
+
+
 }
