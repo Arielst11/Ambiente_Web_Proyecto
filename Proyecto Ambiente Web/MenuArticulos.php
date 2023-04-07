@@ -26,12 +26,12 @@ include_once 'Include\navbar.html';
 
 <div class="submenu-articulo">
 <h2> Modificar </h2> 
-<a href="InsertarArticulo.php"><img height="300px" src="Images/edit.png"></a> 
+<a href="ModificarArticulo.php"><img height="300px" src="Images/edit.png"></a> 
 </div>
 
 <div class="submenu-articulo">
 <h2> Eliminar </h2> 
-<a href="InsertarArticulo.php"><img height="300px" src="Images/trash.png"></a> 
+<a href="EliminarArticulo.php"><img height="300px" src="Images/trash.png"></a> 
 </div>
 
 

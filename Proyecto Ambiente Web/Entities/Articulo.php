@@ -8,7 +8,7 @@ $conexion = Conecta();
 
 // formato de datos utf8
 if (mysqli_set_charset($conexion, "utf8")){
-    $resultado = $conexion->query("select nombre, descripcion, precio, imagen from articulos");    
+    $resultado = $conexion->query("select id, nombre, descripcion, precio, imagen from articulos");    
 }
 Desconecta($conexion);
 

@@ -70,7 +70,7 @@ if($idOK == false) {
 } else {
     require_once "../Entities/Articulo.php";
 
-    if (EliminarAriticulo($id)) {
+    if (EliminarArticulo($id)) {
     echo "<script>  alert('El producto ha sido eliminado correctamente.') </script>";
     echo "<script> window.location = '../EliminarArticulo.php' </script>";
     } else {

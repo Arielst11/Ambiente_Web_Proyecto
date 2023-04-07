@@ -36,7 +36,7 @@ include_once 'Include\navbar.html';
   <div class="form-group">
     <input type="hidden" id="action" name="Action-Articulo"  value= "Insert">
   </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
+  <button type="submit" class="btn btn-primary">Ingresar a la base de datos</button>
 </form>
 
 
