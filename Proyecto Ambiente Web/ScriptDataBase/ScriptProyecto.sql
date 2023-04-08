@@ -3,14 +3,18 @@ use proyecto_ambiente_web;
 
 create table usuarios(
 id int not null auto_increment,
+nombreUsuario varchar(50) not null,
 nombre varchar(25) not null,
 correo varchar(100) not null,
 contraseña varchar(30) not null,
 telefono varchar(50) not null,
 direccion varchar(200) not null,
 genero varchar (10) not null,
+tipo varchar (40) not null,
 primary key(id));
 
+insert into usuarios ( nombreUsuario, nombre , correo ,  contraseña , telefono, direccion, genero, tipo ) values
+('Sommers','Ariel' , 'asancheztroz99@gmail.com' ,'x2xlastx2x?', '86299030', 'San José, Costa Rica' , 'Hombre' , 'administrador' );
 
 create table articulos(
 id int not null auto_increment,
