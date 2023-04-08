@@ -8,7 +8,7 @@ include_once 'Include\head.html';
 </head>
 <body>
 <?php
-include_once 'Include\navbar.html';
+include_once 'Include\navbar.php';
 ?>   
 
 <h1> Registre su usuario </h1>
@@ -19,6 +19,10 @@ include_once 'Include\navbar.html';
     <input type="email" class="form-control" id="emailField" name="correo"aria-describedby="emailHelp" placeholder="ingrese su email" requierd>
     <small id="emailHelp" class="form-text text-muted">Su correo no será compartido con nadie.</small>
   </div>
+  <div class="form-group">
+    <label for="userloginNameField">Ingrese su nombre de usuario </label>
+    <input type="textfield" class="form-control" id="userloginNameField" name="Nombre-Usuario-login" placeholder="ejemplo Ast11 " requierd>
+  </div> 
   <div class="form-group">
     <label for="passwordField">Contraseña</label>
     <input type="password" class="form-control" id="passwordField" name="contraseña1" placeholder="Ingrese una contraseña" requierd>
@@ -44,6 +48,9 @@ include_once 'Include\navbar.html';
     <input type="radio" class="form-check-input" id="Radio1" name="genero" value="Hombre">
     <label class="form-check-label" for="Radio2">Mujer</label>
     <input type="radio" class="form-check-input" id="Radio2" name="genero" value="Mujer" >
+  </div>
+  <div class="form-group">
+    <input type="hidden" id="tipo" name="Tipo-Usuario"  value= "cliente">
   </div>
   <div class="form-group">
     <input type="hidden" id="action" name="Action-Usuario"  value= "Insert">

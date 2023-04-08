@@ -8,7 +8,7 @@ include_once 'Include\head.html';
 </head>
 <body>
 <?php
-include_once 'Include\navbar.html';
+include_once 'Include\navbar.php';
 ?>
 <h1>Algunos puntos de entrega</h1>
 
