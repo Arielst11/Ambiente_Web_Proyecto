@@ -24,11 +24,8 @@ $nombreSession = $_SESSION['Nombre'];
  echo   "<a class='nav-element' href='Registrar.php'>Registrar usuario</a>";
 
 
-if($acceso == 2){
-echo   "<a class='nav-element'>Carrito</a>";
-}
- if($acceso == 1){
-echo   "<a class='nav-element'>Manejo de usuarios</a>";
+if($acceso == 2 || $acceso == 1){
+echo   "<a class='nav-element' href='Carrito.php'>Carrito</a>";
 }
  if($acceso == 1){
 echo   "<a class='nav-element' href='MenuArticulos.php'>Manejo de artículos</a>";

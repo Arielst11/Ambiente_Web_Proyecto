@@ -24,6 +24,15 @@ precio varchar(300) not null,
 imagen varchar(500) not null,
 primary key(id));
 
+create table carrito(
+id int not null auto_increment,
+nombre varchar(25) not null,
+descripcion varchar(300) not null,
+precio varchar(300) not null,
+imagen varchar(500) not null,
+primary key(id));
+
+
 
 insert into articulos ( nombre , descripcion ,  precio , imagen) values
 ('Monitor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt', '₡15000' , 'https://www.intelec.co.cr/image/cache/catalog/catalogo/Monitores/5RD66AA-800x800w.jpg.webp' );
