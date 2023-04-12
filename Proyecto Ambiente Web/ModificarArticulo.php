@@ -31,7 +31,7 @@ include_once 'Include\navbar.php';
   </div> 
   <div class="form-group">
     <label for="priceField">Ingrese el precio del producto</label>
-    <input type="textfield" class="form-control" id="priceField" name="Precio-Articulo" placeholder=" nuevo precio ejemplo ₡15000" requierd>
+    <input type="number" class="form-control" id="priceField" name="Precio-Articulo" placeholder=" nuevo precio ejemplo ₡15000" requierd>
   </div> 
   <div class="form-group">
     <label for="urlField">URL imagen</label>

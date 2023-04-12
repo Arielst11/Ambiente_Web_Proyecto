@@ -36,7 +36,7 @@ while ($mostrar = mysqli_fetch_array($selectArticulos)){
  echo   "<th scope='row'>$mostrar[id]</th>";
  echo   "<td>$mostrar[nombre]</td>";
  echo   "<td>$mostrar[descripcion]</td>";
- echo   "<td>$mostrar[precio]</td>";
+ echo   "<td>₡$mostrar[precio]</td>";
  echo   "<td><img width='30px'src=$mostrar[imagen] alt=''></td>";
  echo   "<td>
 <form action='PHP\procesarArticuloCarrito.php' method='POST'>

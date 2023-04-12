@@ -65,7 +65,8 @@ Items elements
     justify-content: center;
     display: grid;
     grid-template-columns: 210px 210px 210px 210px ;
-    column-gap: 20px;
+    column-gap: 50px;
+    row-gap: 20px;
 
 }
 
@@ -74,10 +75,12 @@ Items elements
     align-items: center;
     justify-content: center;
     width: 210px;
+    height: 420px;
     border-radius: 1%;
     border-style: solid;
     border-color: darkslategray;
 }
+
 
 
 /*
@@ -89,7 +92,7 @@ sub menu articulos
     display: grid;
     grid-template-columns: 300px 300px 300px;
     justify-content: center;
-    column-gap: 60px;
+    column-gap: 20px;
 
 }
 
