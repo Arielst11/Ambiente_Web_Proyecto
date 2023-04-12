@@ -33,6 +33,9 @@ echo   "<a class='nav-element' href='MenuArticulos.php'>Manejo de artículos</a>
 if($acceso == 0 ){
 echo   "<a class='nav-element' href='IniciarSesion.php'>Iniciar Sesión</a>"; 
 }
+if($acceso == 1 ){
+echo   "<a class='nav-element' href='Facturas.php'>Facturas y entregas</a>"; 
+}
 if($acceso == 1 || $acceso ==2 ){
 echo   "<a class='nav-element' href='PHP/procesarCerrarSesionUsuario.php'>Cerrar Sesion</a>";
 }

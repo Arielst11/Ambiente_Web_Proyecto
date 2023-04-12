@@ -51,9 +51,22 @@ while ($mostrar = mysqli_fetch_array($selectArticulos)){
   </tbody>
 </table>
 
+<h2>Total a Pagar: </h2>
+<?php
+include_once 'Entities\ArticuloCarrito.php';
+$total = PrecioCarrito() ;
+$mostrar = mysqli_fetch_array($total);
+echo '<h2>';
+echo "₡ $mostrar[total]";
+echo '</h2>';
 
+echo "<h2>Confirmar compra: </h2>";
+echo "<form action='PHP\procesarFactura.php' method='POST'>";
+echo "<input name='Total-Factura' value = $mostrar[total] hidden >";
+echo "<button type='submit'><img src='Images/verified.png' heigh='50px' width='50px'> </button>";
+echo "</form>";
 
-
+?>
 
 </body>
 </html>

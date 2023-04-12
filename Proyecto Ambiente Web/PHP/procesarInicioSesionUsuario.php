@@ -14,7 +14,7 @@ $loginPasswordValidado = validaDatos($loginPassword);
 require_once "../Entities/Usuario.php";
 // se calcula si hay rows en la base de datos que tengan ese username y password
 $encontrados = encuentraSesion($loginName , $loginPassword);
-$matches = mysqli_fetch_array($encontrados);
+$rows = mysqli_fetch_array($encontrados);
 
 // variables del usuario
 
@@ -23,7 +23,7 @@ if($loginNameValidado == false || $loginPasswordValidado == false) {
     echo "<script>  alert('alguno de los elementos no fue completado') </script>";
     echo "<script> window.location = '../IniciarSesion.php' </script>";
     
-}elseif($matches['contar'] == 1){
+}elseif($rows['contar'] == 1){
     
     
     require_once "../Entities/Usuario.php";
@@ -36,6 +36,13 @@ if($loginNameValidado == false || $loginPasswordValidado == false) {
         session_start();
         $_SESSION['acceso']=1; 
         $_SESSION['Nombre']= $datosUsuario['nombre'];
+        $_SESSION['Nombreusuario']= $datosUsuario['nombreUsuario'];
+        $_SESSION['Correo']= $datosUsuario['correo'];
+        $_SESSION['Telefono']= $datosUsuario['telefono'];
+        $_SESSION['Direccion']= $datosUsuario['direccion'];
+        $_SESSION['Genero']= $datosUsuario['genero']; 
+        $_SESSION['Tipo']= $datosUsuario['tipo'];
+
         echo "<script>  alert('Bienvenido Administrador $datosUsuario[nombre]') </script>";
         echo "<script> window.location = '../Index.php' </script>";    
 
@@ -43,6 +50,13 @@ if($loginNameValidado == false || $loginPasswordValidado == false) {
         session_start();
         $_SESSION['acceso']=2; 
         $_SESSION['Nombre']= $datosUsuario['nombre'];
+        $_SESSION['Nombreusuario']= $datosUsuario['nombreUsuario'];
+        $_SESSION['Correo']= $datosUsuario['correo'];
+        $_SESSION['Telefono']= $datosUsuario['telefono'];
+        $_SESSION['Direccion']= $datosUsuario['direccion'];
+        $_SESSION['Genero']= $datosUsuario['genero'];
+        $_SESSION['Tipo']= $datosUsuario['tipo'];
+
         echo "<script>  alert('Bienvenido Cliente $datosUsuario[nombre]') </script>";
         echo "<script> window.location = '../Index.php' </script>";  
     }else{
@@ -50,7 +64,7 @@ if($loginNameValidado == false || $loginPasswordValidado == false) {
         echo "<script> window.location = '../IniciarSesion.php' </script>";
 
     }
-}elseif($matches['contar'] == 0){
+}elseif($rows['contar'] == 0){
     echo "<script>  alert('No hay un usuario registrado con esa contraseña') </script>";
     echo "<script> window.location = '../IniciarSesion.php' </script>";
 

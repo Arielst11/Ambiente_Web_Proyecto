@@ -50,3 +50,16 @@ descripcion varchar(300) not null,
 precio double not null,
 imagen varchar(500) not null,
 primary key(id));
+
+
+create table factura(
+id int not null auto_increment,
+nombreUsuario varchar(50) not null,
+nombre varchar(25) not null,
+correo varchar(100) not null,
+telefono varchar(50) not null,
+direccion varchar(200) not null,
+genero varchar (10) not null,
+tipo varchar (40) not null,
+total varchar(300) not null,
+primary key(id));

@@ -98,6 +98,18 @@ Desconecta($conexion);
 
 }
 
+function PrecioCarrito() {
+
+    require_once "DatabaseConexion\conexion.php";
+    $conexion = Conecta();
+    $total;
+    // formato de datos utf8
+    if (mysqli_set_charset($conexion, "utf8")){
+        $total = $conexion->query("select sum(precio) as total from carrito");    
+    }
+    Desconecta($conexion);
+    return $total;
+    }
 
 
 ?>

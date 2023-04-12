@@ -55,7 +55,7 @@ function datosInicioSesion($username , $password){
     
     // formato de datos utf8
     if (mysqli_set_charset($conexion, "utf8")){
-        $resultado = $conexion->query("select nombreUsuario, nombre, contraseña, tipo from usuarios where nombreUsuario = '$username'  && contraseña = '$password' ");  
+        $resultado = $conexion->query("select nombreUsuario, nombre,correo, contraseña, telefono, direccion, genero , tipo from usuarios where nombreUsuario = '$username'  && contraseña = '$password' ");  
     }
     Desconecta($conexion);
     return $resultado;
