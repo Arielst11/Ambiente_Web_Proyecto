@@ -34,7 +34,7 @@ include_once 'Include\navbar.php';
   <tbody>
 
   <?php
-include_once 'Entities\ArticuloCarrito.php';
+include_once 'Entities\Factura.php';
 $selectFactura = MuestraFacturas();
 while ($mostrar = mysqli_fetch_array($selectFactura)){
  echo   "<tr>";

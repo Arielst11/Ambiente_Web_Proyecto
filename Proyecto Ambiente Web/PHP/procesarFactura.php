@@ -21,6 +21,10 @@ if(IngresarFactura($NombreUsuario, $Nombre,$Correo,$Telefono,$Direccion,$Genero,
 echo "<script>  alert('La factura se ha generado.') </script>";
 echo "<script> window.location = '../Carrito.php' </script>";
 
+require_once "../Entities/ArticuloCarrito.php";
+CerrarCarrito();
+
+
 }else{
     echo "<script>  alert('La factura no se ha generado correctamente, favor tratar de nuevo.') </script>";
     echo "<script> window.location = '../Carrito.php' </script>";  

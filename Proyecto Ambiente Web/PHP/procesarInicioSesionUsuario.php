@@ -54,7 +54,7 @@ if($loginNameValidado == false || $loginPasswordValidado == false) {
         $_SESSION['Correo']= $datosUsuario['correo'];
         $_SESSION['Telefono']= $datosUsuario['telefono'];
         $_SESSION['Direccion']= $datosUsuario['direccion'];
-        $_SESSION['Genero']= $datosUsuario['genero'];
+        $_SESSION['Genero']= $datosUsuario['genero']; 
         $_SESSION['Tipo']= $datosUsuario['tipo'];
 
         echo "<script>  alert('Bienvenido Cliente $datosUsuario[nombre]') </script>";

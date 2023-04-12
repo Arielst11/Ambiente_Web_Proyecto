@@ -1,16 +1,16 @@
 <?php
 
-require_once "../DatabaseConexion\conexion.php";
+
 
 function IngresarFactura($NombreUsuario, $Nombre, $Correo ,$Telefono, $Direccion, $Genero , $tipo , $total)
-{
+{require_once "../DatabaseConexion\conexion.php";
     $retorno = false;
     $conexion = Conecta();
     
     // formato de datos utf8
     if (mysqli_set_charset($conexion, "utf8")){
         $stmt = $conexion->prepare("Insert into factura (nombreUsuario, nombre, correo, telefono, direccion, genero ,tipo ,total)
-                                        values(?,?,?,?,?,?,?,?,?)");
+                                        values(?,?,?,?,?,?,?,?)");
         $stmt->bind_param("ssssssss", $iNombreUsuario, $iNombre, $iCorreo,$iTelefono, $iDireccion, $iGenero, $iTipo, $iTotal );
 
         //set parametros y ejecutar
@@ -34,7 +34,7 @@ function IngresarFactura($NombreUsuario, $Nombre, $Correo ,$Telefono, $Direccion
 }
 
 function MuestraFacturas(){
-
+ require_once "DatabaseConexion\conexion.php";   
     $resultado;
     $conexion = Conecta();
     
@@ -47,4 +47,6 @@ function MuestraFacturas(){
 
     return $resultado;
 }
+
+
 
