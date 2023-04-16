@@ -3,7 +3,7 @@
 require_once "../DatabaseConexion\conexion.php";
 
 function IngresarUsuario($NombreUsuario, $Nombre, $Correo, $Contraseña ,$Telefono, $Direccion, $Genero , $tipo)
-{
+{require_once "../DatabaseConexion\conexion.php";
     $retorno = false;
     $conexion = Conecta();
     
@@ -34,6 +34,7 @@ function IngresarUsuario($NombreUsuario, $Nombre, $Correo, $Contraseña ,$Telefo
 }
 
 function muestraUsuarios(){
+    require_once "../DatabaseConexion\conexion.php";
 
     $resultado;
     $conexion = Conecta();
@@ -49,6 +50,7 @@ function muestraUsuarios(){
 }
 
 function datosInicioSesion($username , $password){
+    require_once "../DatabaseConexion\conexion.php";
 
     $resultado;
     $conexion = Conecta();
@@ -64,6 +66,7 @@ function datosInicioSesion($username , $password){
 
 
 function encuentraSesion($username , $password){
+    require_once "../DatabaseConexion\conexion.php";
 
     $resultado;
     $conexion = Conecta();
