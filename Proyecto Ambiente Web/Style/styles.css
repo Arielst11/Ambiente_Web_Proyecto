@@ -1,0 +1,239 @@
+body {
+    min-height: 100vh;
+    background-image: url(\Images\bg01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 20px 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fade-in 0.7s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/*
+Nav elements
+*/
+.gridContainer-Nav {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    column-gap: 10px;
+    justify-content: center;
+}
+
+.nav-element-brand {
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    font-size: 28px;
+    text-shadow: 2px 2px 2px #C0C0C0;
+}
+
+.nav-element-brand-username {
+    float: right;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #333;
+    font-size: 20px;
+    margin-left: 65px;
+    font-weight: inherit;
+    font-family: system-ui, sans-serif;
+}
+
+.nav-element {
+    text-align: center;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    font-family: system-ui, sans-serif;
+}
+
+.nav-element:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #ffeded;
+}
+
+/*
+puntos entrega elements
+*/
+.gridContainer-puntosEntrega {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card p {
+    text-align: left;
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+/*
+Items elements
+*/
+
+.gridcontainer-Items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.card.cardItem {
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card.cardItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardItem h2 {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.cardItem p {
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+/*
+sub menu articulos
+*/
+
+.gridcontainer-submenu-articulos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.submenu-articulo {
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-modificar {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/*  botones */
+
+.btn {
+    display: grid;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 1%;
+    border-style: solid;
+    border-color: black;
+    font-family: system-ui, sans-serif;
+}
+
+.btn.btn-primary {
+    display: grid;
+    background-color: #e3665d;
+    border-color: black;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 1%;
+    border-style: solid;
+    border-color: black;
+    font-family: system-ui, sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: #d00000;
+    border-color: black;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+}
