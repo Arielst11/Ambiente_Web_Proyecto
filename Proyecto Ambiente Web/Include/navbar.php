@@ -40,7 +40,7 @@ if($acceso == 1 || $acceso ==2 ){
 echo   "<a class='nav-element' href='PHP/procesarCerrarSesionUsuario.php'>Cerrar Sesion</a>";
 }
 if($acceso == 1 || $acceso ==2 ){
-echo   "<p class='nav-element-brand'>Bienvenido $nombreSession </p>";
+echo   "<p class='nav-element-brand-username'>Bienvenido $nombreSession </p>";
 }
 echo   "</div>";
 
