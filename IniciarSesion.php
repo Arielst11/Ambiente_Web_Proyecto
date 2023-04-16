@@ -33,7 +33,9 @@ include_once 'Include\navbar.php';
 </div>
 </form>
 
-
+<?php
+include_once 'Include\footer.html';
+?> 
 
 </body>
 </html>
