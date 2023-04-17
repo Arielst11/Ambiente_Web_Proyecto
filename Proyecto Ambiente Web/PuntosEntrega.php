@@ -10,6 +10,8 @@ include_once 'Include\head.html';
 <?php
 include_once 'Include\navbar.php';
 ?>
+
+<main>
 <h1>Algunos puntos de entrega</h1>
 
 <div class="gridContainer-puntosEntrega"> 
@@ -53,9 +55,18 @@ include_once 'Include\navbar.php';
   </div>
 
 </div>
+
+</main>
+
+
+<footer>
+  <?php
+include_once 'Include\footer.html';
+
+?>
+</footer>
+
 </body>
-
-
 
 
 </html>
