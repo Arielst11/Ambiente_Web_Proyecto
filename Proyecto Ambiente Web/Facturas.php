@@ -11,7 +11,7 @@ include_once 'Include\head.html';
 include_once 'Include\navbar.php';
 ?>
 
-
+<main>
 <h1>Facturas y Entregas</h1>
 <hr>
 
@@ -52,6 +52,9 @@ while ($mostrar = mysqli_fetch_array($selectFactura)){
     ?>
   </tbody>
 </table>
+
+</main>
+
 
 </body>
 </html>
