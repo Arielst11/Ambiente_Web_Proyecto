@@ -56,15 +56,20 @@ while ($mostrar = mysqli_fetch_array($selectArticulos)){
 include_once 'Entities\ArticuloCarrito.php';
 $total = PrecioCarrito() ;
 $mostrar = mysqli_fetch_array($total);
-echo '<h2>';
-echo "₡ $mostrar[total]";
-echo '</h2>';
 
-echo "<h2>Confirmar compra: </h2>";
+echo "<div>";
+echo "<div class='card-cart'>";
+echo "<h2 class='card-title'>Total: ₡ $mostrar[total]</h2>";
+
 echo "<form action='PHP\procesarFactura.php' method='POST'>";
-echo "<input name='Total-Factura' value = $mostrar[total] hidden >";
-echo "<button type='submit'><img src='Images/verified.png' heigh='50px' width='50px'> </button>";
+echo "<input type='hidden' name='Total-Factura' value = $mostrar[total] >";
+echo "<button type='submit' class='card-btn'>";
+echo "<img class='card-btn-icon' src='Images/verified.png'>";
+echo "<p class='cart-text'> Confirmar Compra </p> ";
+echo "</button>";
 echo "</form>";
+echo "</div>";
+echo "</div>";
 
 ?>
 
