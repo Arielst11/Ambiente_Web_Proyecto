@@ -11,9 +11,11 @@ include_once 'Include\head.html';
 include_once 'Include\navbar.php';
 ?>
 
+<main>
 
 <h1>Elementos en venta </h1>
 <hr>
+
 <div class="gridcontainer-Items">
 
 <?php
@@ -44,9 +46,15 @@ echo "</form>";
 
 
 </div>
+</main>
+
+<footer>
+<?php
+include_once 'Include\footer.html';
+
+?>
+</footer>
+
 </body>
-
-
-
 
 </html>
