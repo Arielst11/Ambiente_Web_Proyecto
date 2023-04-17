@@ -11,6 +11,8 @@ include_once 'Include\head.html';
 include_once 'Include\navbar.php';
 ?>   
 
+<main>
+
 <h1> Registre su usuario </h1>
 
 <form action="PHP\procesarRegistroUsuario.php" method="POST" >
@@ -58,7 +60,13 @@ include_once 'Include\navbar.php';
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
+</main>
 
+<footer>
+<?php
+include_once 'Include\footer.html';
+?>
+</footer>
 
 </body>
 </html>
